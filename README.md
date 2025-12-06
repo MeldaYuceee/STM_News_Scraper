@@ -1,25 +1,32 @@
-# STM News Scraper – Automated Web News Extraction
+# STM News Scraper – Automated Retrieval of STM News & Press Releases
 
-> **Domain:** Web Scraping / OSINT-like Data Collection  
+> **Domain:** Web Scraping / OSINT-style Information Collection  
 > **Level:** Prototype (Student R&D)  
-> **Purpose:** Retrieve recent STM news releases programmatically and list them in a structured format
+> **Purpose:** Programmatically retrieve public STM news items (titles + URLs) and list them for quick review
 
 ---
 
-## 1. Background & Overview
-STM publishes frequent news articles and press releases related to defense projects, technology demonstrations and company announcements.  
-This project provides a **minimal web scraping pipeline** that collects titles and URLs from the public STM website and displays them in a clean list.
+## 1. Overview & Motivation
+STM publishes regular announcements, press releases and defense-related updates. Keeping track of these manually becomes time-consuming as the volume increases.
 
-The goal is to demonstrate basic scraping techniques using Python and Selenium/BeautifulSoup.
+This project builds a **minimal automated retrieval tool** that:
+- visits STM’s official website,
+- extracts recent news headlines and URLs,
+- prints them in a structured format,
+- prepares the data for further analysis (e.g., keywords, dates, topics).
+
+The result is an introductory example of automation for **public information monitoring**.
 
 ---
 
-## 2. Features
-- Fetch recent STM news and press releases  
-- Extract title and URL for each entry  
-- Print them in a readable output format  
-- Simple code structure suitable for beginners  
-- Includes optional Pandas handling for further processing  
+## 2. What the Script Does
+- Opens STM news page
+- Scrapes all visible articles
+- Extracts headline + link
+- Outputs results in a clean list
+- (Optional) converts data to CSV/JSON
+
+This represents a simple baseline for automated information collection.
 
 ---
 
@@ -33,8 +40,7 @@ The goal is to demonstrate basic scraping techniques using Python and Selenium/B
 
 ## 4. Installation & Run
 
-Clone the repository:
+Clone:
 ```bash
 git clone <repo-link>
 cd stm-news-scraper
-
